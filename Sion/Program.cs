@@ -88,8 +88,7 @@ namespace Sion
 
         private void OnDraw(EventArgs args)
         {
-            if (Player.IsDead) return;
-            if (Config.Item("DrawQ").GetValue<bool>() && SkillQ.Level > 0) Utility.DrawCircle(Player.Position, Q.Range, System.Drawing.Color.White);
+            if (Config.Item("DrawQ").GetValue<bool>() && SkillQ.Level > 0) Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
         }
 
         static void Game_OnGameProcessPacket(GamePacketEventArgs args)
