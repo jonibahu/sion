@@ -64,8 +64,8 @@ namespace Sion
             Config.SubMenu("R").AddItem(new MenuItem("MoveToMouse", "Move to mouse (Exploit)").SetValue(false));//Disabled by default since its not legit Keepo
             
             
-            Config.AddSubMenu(new Menu("Draw Settings", "DrawSettings"));
-            Config.SubMenu("DrawSettings").AddItem(new MenuItem("DrawQ").SetValue(false));
+            var drawMenu = _menu.AddSubMenu(new Menu("Drawing", "Drawing"));
+            drawMenu.AddItem(new MenuItem("drawQE", "Draw Q, E range").SetValue(new Circle(true, System.Drawing.Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
 
             Config.AddToMainMenu();
 
@@ -88,7 +88,7 @@ namespace Sion
 
         static void Drawing_OnDraw(EventArgs args)
         {
-        if (Config.Item("DrawQ").GetValue<bool>()
+        if (Config.Item("DrawQ").GetValue()
          Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
         }
 
