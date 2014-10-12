@@ -65,7 +65,7 @@ namespace Sion
             
             
             Config.AddSubMenu(new Menu("Draw Settings", "DrawSettings"));
-            Config.SubMenu("DrawSettings").AddItem(new MenuItem("DrawQ", "Q Range").SetValue(false));
+            Config.SubMenu("DrawSettings").AddItem(new MenuItem("DrawQ").SetValue(false));
 
             Config.AddToMainMenu();
 
@@ -88,7 +88,7 @@ namespace Sion
 
         static void Drawing_OnDraw(EventArgs args)
         {
-         if Config.Item("DrawQ").GetValue()
+         if(Config.Item("DrawQ").GetValue())
          Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
         }
 
