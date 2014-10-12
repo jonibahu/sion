@@ -63,9 +63,6 @@ namespace Sion
             Config.SubMenu("R").AddItem(new MenuItem("AntiCamLock", "Avoid locking camera").SetValue(true));
             Config.SubMenu("R").AddItem(new MenuItem("MoveToMouse", "Move to mouse (Exploit)").SetValue(false));//Disabled by default since its not legit Keepo
             
-            
-           Config.AddSubMenu(new Menu("Draw Settings", "DrawSettings"));
-           Config.SubMenu("DrawSettings").AddItem(new MenuItem("DrawQ").SetValue(false));
 
             Config.AddToMainMenu();
 
