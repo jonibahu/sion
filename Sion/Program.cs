@@ -88,7 +88,7 @@ namespace Sion
 
         private void OnDraw(EventArgs args)
         {
-            if (Config.Item("DrawQ").GetValue<bool>() > 0) Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
+            if (Config.Item("DrawQ").GetValue<bool>()) Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
         }
 
         static void Game_OnGameProcessPacket(GamePacketEventArgs args)
