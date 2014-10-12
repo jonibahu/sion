@@ -83,11 +83,6 @@ namespace Sion
             }
         }
 
-        static void Drawing_OnDraw(EventArgs args)
-        {
-            Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
-        }
-
         static void Game_OnGameProcessPacket(GamePacketEventArgs args)
         {
             if (args.PacketData[0] == 0xFE && Config.Item("AntiCamLock").GetValue<bool>())
