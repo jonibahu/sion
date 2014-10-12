@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -81,6 +81,11 @@ namespace Sion
             {
                 QCastPos = args.End.To2D();
             }
+        }
+
+        static void Drawing_OnDraw(EventArgs args)
+        {
+            Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
         }
 
         static void Game_OnGameProcessPacket(GamePacketEventArgs args)
