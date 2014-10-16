@@ -63,6 +63,8 @@ namespace Sion
             Config.SubMenu("R").AddItem(new MenuItem("AntiCamLock", "Avoid locking camera").SetValue(true));
             Config.SubMenu("R").AddItem(new MenuItem("MoveToMouse", "Move to mouse (Exploit)").SetValue(false));//Disabled by default since its not legit Keepo
             
+            Config.AddSubMenu(new Menu("Draw", "Draw"));
+            Config.SubMenu("Draw").AddItem(new MenuItem("Draw", "Draw").SetValue(true));
 
             Config.AddToMainMenu();
 
@@ -85,6 +87,7 @@ namespace Sion
 
         static void Drawing_OnDraw(EventArgs args)
         {
+            if (Config.Item("Draw").GetValue().Active)
             Utility.DrawCircle(ObjectManager.Player.Position, Q.Range, System.Drawing.Color.White);
         }
 
